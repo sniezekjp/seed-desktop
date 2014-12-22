@@ -10,11 +10,14 @@
     var mb = new gui.Menu({type:"menubar"});
     mb.createMacBuiltin("App");
     gui.Window.get().menu = mb;
+    window.notifier = require('node-notifier');
   </script>
 </head>
 <body>
-  <h1>hello world</h1>
-
+  <div ng-controller='main'>
+    <h1>hello world</h1>
+    <a href="" ng-click="notify()">notify</a>
+  </div>
   <script src="app.js"></script>
   <script src="http://localhost:1337/livereload.js"></script>
 </body>
